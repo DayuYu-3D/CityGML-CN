@@ -1,0 +1,25 @@
+<xs:complexType name="PlantCoverType">
+    <xs:complexContent>
+        <xs:extension base="AbstractVegetationObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="averageHeight" type="gml:LengthType" minOccurs="0"/>
+                <xs:element name="lod1MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1MultiSolid" type="gml:MultiSolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiSolid" type="gml:MultiSolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSolid" type="gml:MultiSolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSolid" type="gml:MultiSolidPropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfPlantCover" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="PlantCover" type="PlantCoverType" substitutionGroup="_VegetationObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfPlantCover" type="xs:anyType" abstract="true"/>

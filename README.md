@@ -1,2 +1,32 @@
-# CityGMLä¸­æ–‡ç‰ˆ
-OGC CityGMLæ ‡å‡†ä¸­æ–‡ç‰ˆ
+# OGC CityGML 2.0ÖĞÎÄ°æ±¾
+
+´Ë²Ö¿â°üº¬ÁËOGC CityGML 2.0ÖĞÎÄ°æ±¾µÄËùÓĞÄÚÈİ
+
+´Ë²Ö¿âµÄ×éÖ¯·½Ê½ÈçÏÂ:
+
+* index.adoc - ÎŞÄÚÈİ£¬µ«ÊÇÊÇÒ»¸ö±ØÒªµÄÎÄ¼ş
+* CityGML - °×Æ¤ÊéÎÄµµµÄÖ÷ÒªÄÚÈİÎÄ¼ş¼Ğ
+  - °´¶à¸ö²¿·ÖºÍÄ¿Â¼×éÖ¯
+  - ÕâÊÇ´´½¨°×Æ¤ÊéÎÄ¼şËùĞèµÄÎ¨Ò»ÎÄ¼ş¼Ğ
+  - °×Æ¤ÊéÃ»ÓĞ¹Ì¶¨µÄ½á¹¹£¬ËùÒÔÒª°´ÕÕ×îÊÊºÏÄãµÄÄ¿µÄ×éÖ¯ÄÚÈİ
+
+´Ë²Ö¿âµÄÇëÇóÒÔÏÂ»·¾³:
+
+* Ruby 2.6.7+  £¨apt°²×°£©
+
+* asciiDoctor 2.0.15+ £¨apt°²×°£©
+
+* asciiDoctor-pdf 1.6.0+ £¨gem°²×°£©
+
+* coderay £¨gem°²×°£©
+
+* asciidoctor-pdf-cjk
+
+* asciidoctor-mathematical : ÓÃÓÚpdfÖĞ¹«Ê½µÄÉú³É£¬ÈôÖ»Éú³Éhtml£¬¿É²»°²×°£¬°²×°ÈçÏÂ£º
+- sudo apt install ruby-dev
+
+- sudo apt-get -qq -y install bison flex libffi-dev libxml2-dev libgdk-pixbuf2.0-dev libcairo2-dev libpango1.0-dev fonts-lyx cmake
+
+- sudo gem install asciidoctor-mathematical
+
+¿É²é¿´Ä£°åÑùÊ½£º [PDF](output/output.pdf) and [HTML](output/output.html)

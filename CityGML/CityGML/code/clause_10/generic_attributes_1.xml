@@ -1,0 +1,78 @@
+<xs:complexType name="AbstractGenericAttributeType" abstract="true">
+    <xs:sequence/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_genericAttribute" type="AbstractGenericAttributeType" abstract="true" substitutionGroup="core:_GenericApplicationPropertyOfCityObject"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="StringAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="xs:string"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="stringAttribute" type="StringAttributeType" substitutionGroup="_genericAttribute"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="IntAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="xs:integer"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="intAttribute" type="IntAttributeType" substitutionGroup="_genericAttribute"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="DoubleAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="xs:double"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="doubleAttribute" type="DoubleAttributeType" substitutionGroup="_genericAttribute"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="DateAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="xs:date"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="dateAttribute" type="DateAttributeType" substitutionGroup="_genericAttribute"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="UriAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="xs:anyURI"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="uriAttribute" type="UriAttributeType" substitutionGroup="_genericAttribute"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="MeasureAttributeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractGenericAttributeType">
+            <xs:sequence>
+                <xs:element name="value" type="gml:MeasureType"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="measureAttribute" type="MeasureAttributeType" substitutionGroup="_genericAttribute"/>

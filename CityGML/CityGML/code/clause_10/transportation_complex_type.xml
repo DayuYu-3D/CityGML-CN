@@ -1,0 +1,23 @@
+<xs:complexType name="TransportationComplexType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTransportationObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="trafficArea" type="TrafficAreaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="auxiliaryTrafficArea" type="AuxiliaryTrafficAreaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod0Network" type="gml:GeometricComplexPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod1MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfTransportationComplex" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="TransportationComplex" type="TransportationComplexType" substitutionGroup="_TransportationObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTransportationComplex" type="xs:anyType" abstract="true"/>

@@ -1,0 +1,22 @@
+<xs:complexType name="BridgeInstallationType">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod2Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod3Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod4Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod2ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="lod3ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="lod4ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfBridgeInstallation" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="BridgeInstallation" type="BridgeInstallationType" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfBridgeInstallation" type="xs:anyType" abstract="true"/>

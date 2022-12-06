@@ -1,0 +1,20 @@
+<xs:complexType name="RoomType">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod4Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="interiorFurniture" type="InteriorFurniturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="roomInstallation" type="IntBuildingInstallationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfRoom" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="Room" type="RoomType" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfRoom" type="xs:anyType" abstract="true"/>

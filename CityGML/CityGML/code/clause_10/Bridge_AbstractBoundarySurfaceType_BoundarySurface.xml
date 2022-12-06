@@ -1,0 +1,16 @@
+<xs:complexType name="AbstractBoundarySurfaceType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="opening" type="OpeningPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfBoundarySurface" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:element name="_BoundarySurface" type="AbstractBoundarySurfaceType" abstract="true" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================== -->
+<xs:element name="_GenericApplicationPropertyOfBoundarySurface" type="xs:anyType" abstract=

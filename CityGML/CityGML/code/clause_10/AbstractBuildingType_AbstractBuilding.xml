@@ -1,0 +1,46 @@
+<xs:complexType name="AbstractBuildingType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractSiteType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="yearOfConstruction" type="xs:gYear" minOccurs="0"/>
+                <xs:element name="yearOfDemolition" type="xs:gYear" minOccurs="0"/>
+                <xs:element name="roofType" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="measuredHeight" type="gml:LengthType" minOccurs="0"/>
+                <xs:element name="storeysAboveGround" type="xs:nonNegativeInteger" minOccurs="0"/>
+                <xs:element name="storeysBelowGround" type="xs:nonNegativeInteger" minOccurs="0"/>
+                <xs:element name="storeyHeightsAboveGround" type="gml:MeasureOrNullListType" minOccurs="0"/>
+                <xs:element name="storeyHeightsBelowGround" type="gml:MeasureOrNullListType" minOccurs="0"/>
+                <xs:element name="lod0FootPrint" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod0RoofEdge" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod1MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod2Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod2TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="outerBuildingInstallation" type="BuildingInstallationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="interiorBuildingInstallation" type="IntBuildingInstallationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod3Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod3TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod4Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod4TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="interiorRoom" type="InteriorRoomPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="consistsOfBuildingPart" type="BuildingPartPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="address" type="core:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfAbstractBuilding" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="_AbstractBuilding" type="AbstractBuildingType" abstract="true" substitutionGroup="core:_Site"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfAbstractBuilding" type="xs:anyType" abstract="true"/>

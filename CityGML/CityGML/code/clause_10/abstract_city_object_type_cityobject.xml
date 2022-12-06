@@ -1,0 +1,19 @@
+<xs:complexType name="AbstractCityObjectType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+                <xs:element name="creationDate" type="xs:date" minOccurs="0"/>
+                <xs:element name="terminationDate" type="xs:date" minOccurs="0"/>
+                <xs:element name="externalReference" type="ExternalReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="generalizesTo" type="GeneralizationRelationType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="relativeToTerrain" type="RelativeToTerrainType" minOccurs="0"/>
+                <xs:element name="relativeToWater" type="RelativeToWaterType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfCityObject" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!--  ========================================================================================= -->
+<xs:element name="_CityObject" type="AbstractCityObjectType" abstract="true" substitutionGroup="gml:_Feature"/>
+<!--  ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfCityObject" type="xs:anyType" abstract="true"/>

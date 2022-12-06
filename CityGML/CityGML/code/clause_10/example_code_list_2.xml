@@ -1,0 +1,4 @@
+<bldg:Building>
+    <bldg:roofType codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1000</bldg:roofType>
+    … 
+</bldg:Building>

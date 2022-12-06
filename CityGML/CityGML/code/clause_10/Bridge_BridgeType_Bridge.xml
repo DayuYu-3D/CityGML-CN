@@ -1,0 +1,5 @@
+<xs:complexType name="BridgeType">
+    <xs:complexContent>
+        <xs:extension base="AbstractBridgeType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfBridge" minOccurs="0" maxOccurs="unbounde</xs:sequence></xs:extension></xs:complexContent></xs:complexType><!-- ========================================================================================= --><xs:element name="Bridge" type="BridgeType" substitutionGroup="_AbstractBridge"/><!-- ========================================================================================= --><xs:element name="_GenericApplicationPropertyOfBridge" type="xs:anyType" abstract="true"/>

@@ -1,0 +1,13 @@
+<xs:complexType name="AbstractTransportationObjectType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfTransportationObject" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_TransportationObject" type="AbstractTransportationObjectType" abstract="true" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTransportationObject" type="xs:anyType" abstract="true"/>

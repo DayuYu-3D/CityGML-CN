@@ -1,0 +1,15 @@
+<xs:complexType name="AbstractSiteType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfSite" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!--  ==========================================================================================  
+-->
+<xs:element name="_Site" type="AbstractSiteType" abstract="true" substitutionGroup="_CityObject"/>
+<!--  ==========================================================================================  
+-->
+<xs:element name="_GenericApplicationPropertyOfSite" type="xs:anyType" abstract="true"/>

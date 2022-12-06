@@ -1,0 +1,18 @@
+<SolitaryVegetationObject>
+    <class codeSpace="http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_class.xml">1070</class>
+    <species codeSpace="http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_species.xml">1040</species>
+    <height uom="#m">8</height>
+    <trunkDiameter uom="#m">0.7</trunkDiameter>
+    <crownDiameter uom="#m">8</crownDiameter>
+    <lod1ImplicitRepresentation>
+        <core:ImplicitGeometry>
+            <core:mimeType>1010</core:mimeType>
+            <core:libraryObject>urn:sig3d:tree.wrl</core:libraryObject>
+            <core:referencePoint>
+                <gml:Point srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+                    <gml:pos srsDimension="3">5733690.578 2571129.123 60.0</gml:pos>
+                </gml:Point>
+            </core:referencePoint>
+        </core:ImplicitGeometry>
+    </lod1ImplicitRepresentation>
+</SolitaryVegetationObject>

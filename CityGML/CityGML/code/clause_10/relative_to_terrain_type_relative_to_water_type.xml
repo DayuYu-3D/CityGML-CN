@@ -1,0 +1,19 @@
+<xs:simpleType name="RelativeToTerrainType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="entirelyAboveTerrain"/>
+        <xs:enumeration value="substantiallyAboveTerrain"/>
+        <xs:enumeration value="substantiallyAboveAndBelowTerrain"/>
+        <xs:enumeration value="substantiallyBelowTerrain"/>
+        <xs:enumeration value="entirelyBelowTerrain"/>
+    </xs:restriction>
+</xs:simpleType><!-- ========================================================================================= -->
+<xs:simpleType name="RelativeToWaterType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="entirelyAboveWaterSurface"/>
+        <xs:enumeration value="substantiallyAboveWaterSurface"/>
+        <xs:enumeration value="substantiallyAboveAndBelowWaterSurface"/>
+        <xs:enumeration value="substantiallyBelowWaterSurface"/>
+        <xs:enumeration value="entirelyBelowWaterSurface"/>
+        <xs:enumeration value="temporarilyAboveAndBelowWaterSurface"/>
+    </xs:restriction>
+</xs:simpleType>

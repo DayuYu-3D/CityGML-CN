@@ -1,0 +1,14 @@
+<xs:complexType name="BreaklineReliefType">
+    <xs:complexContent>
+        <xs:extension base="AbstractReliefComponentType">
+            <xs:sequence>
+                <xs:element name="ridgeOrValleyLines" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="breaklines" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfBreaklineRelief" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="BreaklineRelief" type="BreaklineReliefType" substitutionGroup="_ReliefComponent"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfBreaklineRelief" type="xs:anyType" abstract="true"/>

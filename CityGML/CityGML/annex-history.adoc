@@ -1,0 +1,20 @@
+[appendix]
+:appendix-caption: Annex
+= （资料性附录）修订历史
+
+[width="90%",options="header"]
+|===
+| 日期     | 发布版本 | 编辑                   | 描述  
+| 2006-02-01 | 0.1.0    | Czerwinski, Kolbe, Gröger | 启动CityGML标准项目  
+| 2006-02-22 | 0.1.0    | Gröger, Gruber | 补充UML图  
+| 2006-04-26 | 0.2.0    | Kolbe, Gröger, Czerwinski | 向欧洲SDR发布CityGML标准草案
+| 2006-03-06 | 0.3.0    | Kolbe, Gröger, Czerwinski | 更改属性名称，添加部分属性，向OGC发布CityGML标准文件  
+| 2007-05-30 | 0.4.0    | Kolbe, Gröger, Nagel, Lorenz, Benner,Czerwinski,Gruber, Schlüter, Bildstein, Drees, Löwner | 引入全新的外观模型、应用领域扩展（ADE）简介、修改小部分建筑模型、修改小部分城市对象组、在城市家具中增加了地形相交曲线的概念、代码列表应用，向OGC发布CityGML标准文件
+| 2008-02-04 | 1.0.0    | Kolbe, Gröger, Nagel, Stadler, Lorenz | 介绍CityGML数据模型模块化、修改部分外观模型、修改部分城市对象组和交通对象、外部代码列表的编码已更改为GML 3.1.1简单字典专用文件、修订UML图，向CityGML 1.0 SWG发布CityGML标准文件草案
+| 2008-05-19 | 1.0.0    | Kolbe, Gröger, Nagel, Stadler, Lorenz | 根据OGC RFC公示阶段的意见和建议，以及CityGML 1.0 SWG的讨论，对部分内容进行变更和修改，CityGML标准文件草案最终发布至CityGML 1.0 SWG
+| 2008-08-18 | 1.0.0    | Carl Reed | 对OGC^TM^ 标准的发布进行准备，并进行最终编辑
+| 2011-07-19 | 1.1.0    | Nagel, Häfele, Benner, Gröger, Gruber, Schlüter | 向CityGML SWG首次发布CityGML标准文件草案
+| 2011-11-21 | 1.1.0    | Nagel, Häfele, Gröger, Kolbe | 根据OGC RFC公示阶段的意见和建议，以及CityGML SWG的讨论，对部分内容进行变更和修改，CityGML标准文件草案最终发布至CityGML SWG
+| 2012-02-27 | 2.0.0    | Nagel, Häfele, Gröger, Kolbe | 版本从1.1.0更改为2.0.0，以符合135r11中定义的OGC版本控制策略。为反映主要版本号的更改，将本文件的参考号更改为12-019。向CityGML SWG发布CityGML标准文件草案。
+| 2012-03-14 | 2.0.0    | Carl Reed | 对OGC标准进行最终编辑
+|===

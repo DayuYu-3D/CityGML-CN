@@ -1,0 +1,14 @@
+<xs:complexType name="AbstractReliefComponentType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element name="lod" type="core:integerBetween0and4"/>
+                <xs:element name="extent" type="gml:PolygonPropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfReliefComponent" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="_ReliefComponent" type="AbstractReliefComponentType" abstract="true" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfReliefComponent" type="xs:anyType" abstract="true"/>

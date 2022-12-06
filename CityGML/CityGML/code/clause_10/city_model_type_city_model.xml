@@ -1,0 +1,13 @@
+<xs:complexType name="CityModelType">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractFeatureCollectionType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfCityModel" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!--  ========================================================================================= -->
+<xs:element name="CityModel" type="CityModelType" substitutionGroup="gml:_FeatureCollection"/>
+<!--  ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfCityModel" type="xs:anyType" abstract="true"/>

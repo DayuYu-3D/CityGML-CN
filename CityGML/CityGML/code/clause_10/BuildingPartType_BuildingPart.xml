@@ -1,0 +1,12 @@
+<xs:complexType name="BuildingPartType">
+    <xs:complexContent>
+        <xs:extension base="AbstractBuildingType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfBuildingPart" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="BuildingPart" type="BuildingPartType" substitutionGroup="_AbstractBuilding"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfBuildingPart" type="xs:anyType" abstract="true"/>

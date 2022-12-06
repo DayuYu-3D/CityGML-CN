@@ -1,0 +1,25 @@
+<bldg:Building> …    <bldg:address>
+        <core:Address>
+            <core:xalAddress>                <!-- 46 Brynmaer Road Battersea LONDON, SW11 4EW United Kingdom -->                <!-- source: http://xml.coverpages.org/xnal.html -->
+                <xAL:AddressDetails>
+                    <xAL:Country>
+                        <xAL:CountryName>United Kingdom</xAL:CountryName>
+                        <xAL:Locality Type="City">
+                            <xAL:LocalityName>LONDON</xAL:LocalityName>
+                            <xAL:DependentLocality Type="District">
+                                <xAL:DependentLocalityName>Battersea</xAL:DependentLocalityName>
+                                <xAL:Thoroughfare>
+                                    <xAL:ThoroughfareNumber>46</xAL:ThoroughfareNumber>
+                                    <xAL:ThoroughfareName>Brynmaer Road</xAL:ThoroughfareName>
+                                </xAL:Thoroughfare>
+                            </xAL:DependentLocality>
+                            <xAL:PostalCode>
+                                <xAL:PostalCodeNumber>SW11 4EW</xAL:PostalCodeNumber>
+                            </xAL:PostalCode>
+                        </xAL:Locality>
+                    </xAL:Country>
+                </xAL:AddressDetails>
+            </core:xalAddress>
+        </core:Address>
+    </bldg:address>
+</bldg:Building>

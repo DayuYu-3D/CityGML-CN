@@ -1,0 +1,23 @@
+<PlantCover>
+    <class codeSpace="http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_class.xml">1180</class>
+    <averageHeight uom="#m">0.5</averageHeight>
+    <lod1MultiSurface>
+        <gml:MultiSurface>
+            <gml:surfaceMember>
+                <gml:Polygon srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:pos srsDimension="3">5733806.146 2571329.227 60.0</gml:pos>
+                            <gml:pos srsDimension="3">5733754.782 2571387.011 60.0</gml:pos>
+                            <gml:pos srsDimension="3">5733674.527 2571374.170 60.0</gml:pos>
+                            <gml:pos srsDimension="3">5733670.246 2571274.653 60.0</gml:pos>
+                            <gml:pos srsDimension="3">5733764.413 2571243.621 60.0</gml:pos>
+                            <gml:pos srsDimension="3">5733806.146 2571329.227 60.0</gml:pos>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+            </gml:surfaceMember>
+        </gml:MultiSurface>
+        … 
+    </lod1MultiSurface>
+</PlantCover>

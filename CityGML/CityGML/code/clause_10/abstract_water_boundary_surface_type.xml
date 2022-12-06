@@ -1,0 +1,16 @@
+<xs:complexType name="AbstractWaterBoundarySurfaceType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractCityObjectType">
+            <xs:sequence>
+                <xs:element name="lod2Surface" type="gml:SurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3Surface" type="gml:SurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4Surface" type="gml:SurfacePropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfWaterBoundarySurface" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_WaterBoundarySurface" type="AbstractWaterBoundarySurfaceType" abstract="true" substitutionGroup="core:_CityObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfWaterBoundarySurface" type="xs:anyType" abstract="true"/>

@@ -1,0 +1,6 @@
+<xs:complexType name="GeneralizationRelationType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="_CityObject"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>

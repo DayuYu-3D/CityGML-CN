@@ -1,0 +1,12 @@
+<xs:complexType name="TunnelType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTunnelType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfTunnel" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:element name="Tunnel" type="TunnelType" substitutionGroup="_AbstractTunnel"/>
+<!-- ========================================================================================== -->
+<xs:element name="_GenericApplicationPropertyOfTunnel" type="xs:anyType" abstract="true"/>

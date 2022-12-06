@@ -1,0 +1,38 @@
+…
+<core:cityObjectMember>
+    <bldg:Building gml:id="aa">
+        <bldg:function>1004</bldg:function>
+        <bldg:lod1Solid> ... </bldg:lod1Solid>
+        <noise:buildingHabitants>14</noise:buildingHabitants>
+        <noise:buildingReflectionCorrection uom="dB">4.123</noise:buildingReflectionCorrection>
+    </bldg:Building>
+</core:cityObjectMember>
+<core:cityObjectMember>
+    <bldg:Building gml:id="aaa">
+        <bldg:function>1004</bldg:function>
+        <bldg:lod1Solid> ... </bldg:lod1Solid>
+        <noise:buildingReflectionCorrection uom="dB">3.123</noise:buildingReflectionCorrection>
+        <noise:buildingHabitants>6</noise:buildingHabitants>
+    </bldg:Building>
+</core:cityObjectMember>
+<core:cityObjectMember>
+    <frn:CityFurniture gml:id="CFUR_0815">
+        <frn:function>1520</frn:function>
+        <frn:lod1Geometry> … </frn:lod1Geometry>
+        <noise:noiseCityFurnitureSegmentProperty>
+            <noise:NoiseCityFurnitureSegment gml:id="CFRS_0815">
+                <noise:type>1</noise:type>
+                <noise:reflection>absorbierende Lärmschutzwand</noise:reflection>
+                <noise:reflectionCorrection uom="dB">4.123</noise:reflectionCorrection>
+                <noise:height uom="m">7.123</noise:height>
+                <noise:distance uom="m">21.123</noise:distance>
+                <noise:lod0BaseLine>
+                    <gml:LineString srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783" srsDimension="3">
+                        <gml:coordinates decimal="." cs="," ts=" ">5707335,2524175,188 5707338,2524181,188 5707330,2524185,188 5707327,2524179,188</gml:coordinates>
+                    </gml:LineString>
+                </noise:lod0BaseLine>
+            </noise:NoiseCityFurnitureSegment>
+        </noise:noiseCityFurnitureSegmentProperty>
+    </frn:CityFurniture>
+</core:cityObjectMember>
+…

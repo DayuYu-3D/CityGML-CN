@@ -1,0 +1,887 @@
+[appendix]
+:appendix-caption: Annex
+== （资料性附录）SIG 3D提议的代码清单
+
+本附件举例说明了__gml:CodeType__类型的枚举属性的代码列表规范，并为选定的属性提供了建议。请注意，本附件是非规范性的，所提供的代码列表既不是强制性的，也不是完整的。代码列表的管理与CityGML模式和规范的管理是明确相互分离的（参见章节10.14）。因此，任何组织或信息社区都可以根据自己的信息需要，在CityGML规范之外自由定义代码列表，且每个代码列表都应有一个负责维护和更新内容的官方组织。
+
+本附件中提供的代码列表由SIG 3D管理和维护，可从 http://www.sig3d.de/codelists/standard/ 访问。它们完全包含之前CityGML 1.0规范文档中给出的非规范代码列表（参见 OGC Doc. No. 08-007r1的附件C）。为了保持向后兼容性，之前的条目都没有被修改或改变含义。对于CityGML 2.0中新引入的一些枚举属性，已有额外的代码列表被添加进来，例如__Bridge__和__Tunnel__的模块便是如此。SIG 3D 代码列表将之后将继续补充，先前的1.0版代码列表仍可从位于 http://schemas.opengis.net/citygml/codelists/ 的OGC存储库中被访问。
+
+SIG 3D代码列表以遵循__GML 3.1.1 Simple Dictionary Profile__的__simple dictionaries__形式被实现，并可在CityGML实例文档中被直接引用。为此，由__gml:CodeType__声明的__codeSpace__属性必须指向对应的枚举特征属性的代码列表。SIG 3D应用以下命名模式，以便在http模式中为每个代码列表生成一个全局唯一的URL：
+
+__http://www.sig3d.org/codelists/standard/ __
+__<moduleName>/<version>/<FeatureTypeName>_<propertyName>.xml__
+
+占位符__<moduleName>__必须被替换为定义要素和属性的CityGML模块的名称，模块名称必须以小写字母给出（例如，__building__或__cityfurniture__），__<version>__字段定义指定代码列表的CityGML版本。最后，__<FeatureTypeName>__表示挂接属性的要素类型名称，__<propertyName>__将被替换为属性名称本身。对于这两个占位符，指定要素的CityGML模式文档中所列出的XML元素名称，必须要被选定好。
+
+例如，用于标识___AbstractBuilding__要素（__Building__模块，参见章节10.3）枚举属性__roofType__的SIG 3D代码列表的__codeSpace__值是：
+
+__http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml__
+
+以下片段演示了如何从CityGML实例文档中引用__roofType__的SIG 3D代码列表。根据此代码列表（参见子条款C.1），属性值__1000__表示__flat roof__。
+
+[source,xml]
+----
+<bldg:Building>
+<bldg:roofType codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1000</bldg:roofType>
+…
+</bldg:Building>
+----
+
+可以从这些URL下载SIG 3D代码列表，以允许应用程序自动验证被编码的属性值。
+
+建筑屋顶类型的整个代码列表在下文以范例的形式给出，而其他类型的代码列表则由于篇幅原因，在以下子条款中以表格形式进行描述。子条款根据主题模块进行排序。
+
+*屋顶类型的代码列表*（__http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml__）
+
+[source,xml]
+----
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/profiles/SimpleDictionary/1.0.0/gmlSimpleDictionaryProfile.xsd" gml:id="_AbstractBuilding_roofType">
+<gml:name>_AbstractBuilding_roofType</gml:name>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id1">
+<gml:description>flat roof</gml:description>
+<gml:name>1000</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id2">
+<gml:description>monopitch roof</gml:description>
+<gml:name>1010</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id3">
+<gml:description>skip pent roof</gml:description>
+<gml:name>1020</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id4">
+<gml:description>gabled roof</gml:description>
+<gml:name>1030</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id5">
+<gml:description>hipped roof</gml:description>
+<gml:name>1040</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id6">
+<gml:description>half-hipped roof</gml:description>
+<gml:name>1050</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id7">
+<gml:description>mansard roof</gml:description>
+<gml:name>1060</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id8">
+<gml:description>pavilion roof</gml:description>
+<gml:name>1070</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id9">
+<gml:description>cone roof</gml:description>
+<gml:name>1080</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id10">
+<gml:description>copula roof</gml:description>
+<gml:name>1090</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id11">
+<gml:description>shed roof</gml:description>
+<gml:name>1100</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id12">
+<gml:description>arch roof</gml:description>
+<gml:name>1110</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id13">
+<gml:description>pyramidal broach roof</gml:description>
+<gml:name>1120</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+<gml:dictionaryEntry>
+<gml:Definition gml:id="id14">
+<gml:description>combination of roof forms</gml:description>
+<gml:name>1130</gml:name>
+</gml:Definition>
+</gml:dictionaryEntry>
+</gml:Dictionary>
+----
+
+=== 建筑模块
+
+|===
+4+|  *___AbstractBuilding__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_class.xml
+| 1000                                                                             | habitation            | 1100 | schools, education, research      
+| 1010                                                                             | sanitation            | 1110 | maintainence and waste management 
+| 1020                                                                             | administration        | 1120 | healthcare                        
+| 1030                                                                             | business, trade       | 1130 | communicating                     
+| 1040                                                                             | catering              | 1140 | security                          
+| 1050                                                                             | recreation            | 1150 | storage                           
+| 1060                                                                             | sport                 | 1160 | industry                          
+| 1070                                                                             | culture               | 1170 | traffic                           
+| 1080                                                                             | church institution    | 1180 | function                          
+| 1090                                                                             | agriculture, forestry |      |                                   
+|===
+
+|===
+4+|  *___AbstractBuilding__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml
+http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
+| 1000 | residential building                     | 1840 | rubbish bunker                 
+| 1010 | tenement                                 | 1850 | building for rubbish incineration   
+| 1020 | hostel                                   | 1860 | building for rubbish disposal       
+| 1030 | residential- and administration building | 1870 | building for agrarian and forestry  
+| 1040 | residential- and office building         | 1880 | barn                                
+| 1050 | residential- and business building       | 1890 | stall                               
+| 1060 | residential- and plant building          | 1900 | equestrian hall                     
+| 1070 | agrarian- and forestry building          | 1910 | alpine cabin                        
+| 1080 | residential- and commercial building     | 1920 | hunting lodge                       
+| 1090 | forester's lodge                         | 1930 | arboretum                           
+| 1100 | holiday house                            | 1940 | glass house                         
+| 1110 | summer house                             | 1950 | moveable glass house                
+| 1120 | office building                          | 1960 | public building                     
+| 1130 | credit institution                       | 1970 | administration building             
+| 1140 | insurance                                | 1980 | parliament                          
+| 1150 | business building                        | 1990 | guildhall                           
+| 1160 | department store                         | 2000 | post office                         
+| 1170 | shopping centre                          | 2010 | customs office                      
+| 1180 | kiosk                                    | 2020 | court                               
+| 1190 | pharmacy                                 | 2030 | embassy or consulate                
+| 1200 | pavilion                                 | 2040 | district administration             
+| 1210 | hotel                                    | 2050 | district government                 
+| 1220 | youth hostel                             | 2060 | tax office                          
+| 1230 | campsite building                        | 2070 | building for education and research 
+| 1240 | restaurant                               | 2080 | comprehensive school                
+| 1250 | cantine                                  | 2090 | vocational school                   
+| 1260 | recreational site                        | 2100 | college or university               
+| 1270 | function room                            | 2110 | research establishment              
+| 1280 | cinema                                   | 2120 | building for cultural purposes      
+| 1290 | bowling alley                            | 2130 | castle                              
+| 1300 | casino                                   | 2140 | theatre or opera                    
+| 1310 | industrial building                      | 2150 | concert building                    
+| 1320 | factory                                  | 2160 | museum                              
+| 1330 | workshop                                 | 2170 | broadcasting building               
+| 1340 | petrol / gas station                     | 2180 | activity building                   
+| 1350 | washing plant                            | 2190 | library                             
+| 1360 | cold store                               | 2200 | fort                                
+| 1370 | depot                                    | 2210 | religious building                  
+| 1380 | building for research purposes           | 2220 | church                              
+| 1390 | quarry                                   | 2230 | synagogue                           
+| 1400 | salt works                               | 2240 | chapel                              
+| 1410 | miscellaneous industrial building        | 2250 | community center                    
+| 1420 | mill                                     | 2260 | place of worship                    
+| 1430 | windmill                                 | 2270 | mosque                              
+| 1440 | water mill                               | 2280 | temple                              
+| 1450 | bucket elevator                          | 2290 | convent                             
+| 1460 | weather station                          | 2300 | building for health care            
+| 1470 | traffic assets office                    | 2310 | hospital                            
+| 1480 | street maintenance                       | 2320 | healing centre or care home         
+| 1490 | waiting hall                             | 2330 | health centre or outpatients clinic 
+| 1500 | signal control box                       | 2340 | building for social purposes        
+| 1510 | engine shed                              | 2350 | youth centre                        
+| 1520 | signal box or stop signal                | 2360 | seniors centre                      
+| 1530 | plant building for air traffic           | 2370 | homeless shelter                    
+| 1540 | hangar                                   | 2380 | kindergarten or nursery             
+| 1550 | plant building for shipping              | 2390 | asylum seekers home                 
+| 1560 | shipyard                                 | 2400 | police station                      
+| 1570 | dock                                     | 2410 | fire station                        
+| 1580 | plant building for canal lock            | 2420 | barracks                            
+| 1590 | boathouse                                | 2430 | bunker                              
+| 1600 | plant building for cablecar              | 2440 | penitentiary or prison              
+| 1610 | multi-storey car park                    | 2450 | cemetery building                   
+| 1620 | parking level                            | 2460 | funeral parlor                      
+| 1630 | garage                                   | 2470 | crematorium                         
+| 1640 | vehicle hall                             | 2480 | train station                       
+| 1650 | underground garage                       | 2490 | airport building                    
+| 1660 | building for supply                      | 2500 | building for underground station    
+| 1670 | waterworks                               | 2510 | building for tramway                
+| 1680 | pump station                             | 2520 | building for bus station            
+| 1690 | water basin                              | 2530 | shipping terminal                   
+| 1700 | electric power station                   | 2540 | building for recuperation purposes  
+| 1710 | transformer station                      | 2550 | building for sport purposes         
+| 1720 | converter                                | 2560 | sports hall                         
+| 1730 | reactor                                  | 2570 | building for sports field           
+| 1740 | turbine house                            | 2580 | swimming baths                      
+| 1750 | boiler house                             | 2590 | indoor swimming pool                
+| 1760 | building for telecommunications          | 2600 | sanatorium                          
+| 1770 | gas works                                | 2610 | zoo building                        
+| 1780 | heat plant                               | 2620 | green house                         
+| 1790 | pumping station                          | 2630 | botanical show house                
+| 1800 | building for disposal                    | 2640 | bothy                               
+| 1810 | building for effluent disposal           | 2650 | tourist information centre          
+| 1820 | building for filter plant                | 2700 | others                              
+| 1830 | toilet                                   |      |                                     
+|===
+
+|===
+4+|  *__BuildingFurniture__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_class.xml
+| 1000 | habitation            | 1100 | schools, education, research  
+| 1010 | sanitation            | 1110 | maintenance, waste management 
+| 1020 | administration        | 1120 | healthcare                    
+| 1030 | business, trade       | 1130 | communicating                 
+| 1040 | catering              | 1140 | security                      
+| 1050 | recreation            | 1150 | storage                       
+| 1060 | sport                 | 1160 | industry                      
+| 1070 | culture               | 1170 | traffic                       
+| 1080 | church institution    | 1180 | function                      
+| 1090 | agriculture, forestry |      |                               
+|===
+
+|===
+4+|  *__BuildingFurniture__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml
+http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
+| 1000 | cupboard                   | 2010 | sink, hand-basin             
+| 1010 | wardrobe                   | 2020 | water tap                    
+| 1020 | cabinet                    | 2030 | toilet bowl                  
+| 1030 | sideboard                  | 2040 | bathtub                      
+| 1040 | locker                     | 2050 | shower                       
+| 1050 | tool cabinet               | 2060 | bidet                        
+| 1100 | shelf                      | 2100 | animal park                  
+| 1110 | rack                       | 2110 | aquarium                     
+| 1120 | coat stand                 | 2120 | cage                         
+| 1200 | table                      | 2130 | birdcage                     
+| 1210 | dining table               | 2200 | religious equipment          
+| 1220 | coffee table               | 2300 | shop fittings                
+| 1230 | desk                       | 2310 | sales counter                
+| 1240 | bedside cabinet            | 2320 | glass cabinet                
+| 1250 | baby changing table        | 2330 | changing cubicle             
+| 1260 | bar                        | 2340 | refrigerated counter         
+| 1270 | pool table                 | 2350 | cash desk or till or counter 
+| 1280 | snooker table              | 2360 | box-office                   
+| 1290 | roulette table             | 2400 | machines                     
+| 1270 | work bench                 | 2410 | ticket machine               
+| 1300 | chair                      | 2420 | cigarette machine            
+| 1310 | bench                      | 2430 | cash machine or ATM          
+| 1320 | office chair               | 2440 | vending machine              
+| 1330 | sofa                       | 2450 | gambling machine             
+| 1340 | rocking chair              | 2500 | technical furniture          
+| 1350 | bar stool                  | 2510 | heating installation         
+| 1360 | armchair                   | 2520 | tank                         
+| 1400 | bed                        | 2521 | oil tank                     
+| 1410 | crib                       | 2522 | water tank                   
+| 1420 | bunk bed                   | 2523 | gas tank                     
+| 1430 | cradle                     | 2524 | fuel tank                    
+| 1440 | cot                        | 2525 | milk tank                    
+| 1450 | stretcher                  | 2526 | steel tank                   
+| 1500 | lighting                   | 2530 | fire protection appliance    
+| 1510 | standard lamp              | 2531 | fire extinguishing system    
+| 1520 | ceiling light              | 2532 | fire alarm                   
+| 1530 | spotlight                  | 2533 | fire extinguisher            
+| 1600 | electric appliances        | 2540 | switch board                 
+| 1610 | television set             | 2550 | lifting platform             
+| 1620 | video recorder             | 2560 | compressed air system        
+| 1630 | stereo unit                | 2570 | loud-speaker                 
+| 1700 | kitchen appliances         | 2580 | microphone                   
+| 1710 | cooker                     | 2600 | sports equipment             
+| 1720 | oven                       | 2610 | goal posts                   
+| 1730 | refrigerator               | 2620 | basketball basket            
+| 1740 | coffee machine             | 2630 | volleyball net               
+| 1750 | toaster                    | 2640 | gymnastic apparatus          
+| 1760 | kettle                     | 2650 | diving platform              
+| 1770 | microwave                  | 2660 | swimming pool                
+| 1780 | dish washer                | 2700 | sales promotion furniture    
+| 1800 | laundry equipment          | 2710 | display panel                
+| 1810 | washing machine            | 2720 | billboard                    
+| 1820 | ironing machine            | 2730 | display cabinet              
+| 1830 | rotary iron (mangle)       | 2800 | functional furniture         
+| 1840 | laundry tumble drier       | 2805 | ashtray                      
+| 1850 | spin drier                 | 2810 | lectern                      
+| 1900 | technical office equipment | 2815 | stage                        
+| 1910 | copy machine               | 2820 | blackboard                   
+| 1920 | scanner                    | 2825 | screen                       
+| 1930 | plotter                    | 2830 | mapstand                     
+| 1940 | printer                    | 2835 | rubbish bin                  
+| 1950 | screen                     | 2840 | sauna                        
+| 1960 | computer                   | 2845 | carpet                       
+| 1970 | overhead projector         | 2850 | wall clock                   
+| 1980 | video projector            | 2855 | curtain                      
+| 2000 | sanitation equipment       | 2860 | mirror                       
+|===
+
+|===
+4+|  *__BuildingInstallation__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_class.xml
+| 1000 | outer characteristics | 1040 | communicating 
+| 1010 | inner characteristics | 1050 | security      
+| 1020 | waste management      | 1060 | others        
+| 1030 | maintenance           |      |               
+|===
+
+|===
+4+|  *__BuildingInstallation__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml
+http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml
+| 1000 | balcony                      | 1040 | tower (part of a building) 
+| 1010 | winter garden                | 1050 | column                     
+| 1020 | arcade                       | 1060 | stairs                     
+| 1030 | chimney (part of a building) | 1070 | others                     
+|===
+
+|===
+4+|  *__IntBuildingInstallation__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_class.xml
+| 1000 | Heating, Ventilation, Climate | 6000 | Statics       
+| 2000 | Safety                        | 7000 | Entertainmant 
+| 3000 | Illumination                  | 8000 | Miscellaneous 
+| 4000 | Communication                 | 9999 | Unknown       
+| 5000 | Supply and Disposal           |      |               
+|===
+
+|===
+4+|  *__IntBuildingInstallation__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml
+http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml
+| 1010 | Radiator         | 3020 | Light switch 
+| 1020 | Oven             | 5030 | Power point  
+| 1030 | Fireside         | 5020 | Cable        
+| 1040 | Ventilator       | 7010 | Rafter       
+| 1050 | Air Conditioning | 7020 | Column       
+| 5010 | Pipe             | 8010 | Railing      
+| 3010 | Lamp             | 8020 | Stair        
+|===
+
+|===
+4+|  *___AbstractBuilding__的__roofType__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml
+| 1000 | flat roof        | 1070 | pavilion roof        
+| 1010 | monopitch roof   | 1080 | cone roof                 
+| 1020 | dual pent roof   | 1090 | copula roof               
+| 1030 | gabled roof      | 1100 | sawtooth roof             
+| 1040 | hipped roof      | 1110 | arch roof                 
+| 1050 | half-hipped roof | 1120 | pyramidal broach roof     
+| 1060 | mansard roof     | 1130 | combination of roof forms 
+|===
+
+|===
+4+|  *__Room__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/Room_class.xml
+| 1000 | habitation                   | 1080 | accommodation, waste management 
+| 1010 | administration               | 1090 | healthcare                      
+| 1020 | business, trade              | 1100 | communicating                   
+| 1030 | catering                     | 1110 | security                        
+| 1040 | recreation                   | 1120 | store                           
+| 1050 | church institution           | 1130 | industry                        
+| 1060 | agriculture, forestry        | 1140 | traffic                         
+| 1070 | schools, education, research | 1150 | function                        
+|===
+
+|===
+4+|  *__Room__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml
+http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml
+| 1000 | living room                  | 2170 | showers                         
+| 1010 | bedroom                      | 2200 | tribune                         
+| 1020 | kitchen                      | 2210 | seating / standing capacity     
+| 1030 | hall                         | 2220 | cash point                      
+| 1040 | bath, washroom               | 2230 | vivarium                        
+| 1050 | toilet                       | 2240 | enclosure                       
+| 1060 | stairs                       | 2250 | aquarium                        
+| 1070 | home office                  | 2260 | terrarium                       
+| 1080 | utility room                 | 2270 | aviary                          
+| 1090 | dining room                  | 2280 | menagerie                       
+| 1100 | common room                  | 2290 | stables                         
+| 1110 | party room                   | 2300 | greenhouse                      
+| 1120 | nursery                      | 2310 | food silo                       
+| 1130 | store room                   | 2320 | hayloft                         
+| 1140 | canteen, common kitchen      | 2330 | motor pool                      
+| 1150 | storeroom                    | 2340 | barn                            
+| 1160 | balcony, gallery             | 2350 | riding hall                     
+| 1170 | terrace                      | 2360 | horse box                       
+| 1180 | drying room                  | 2370 | hunting lodge                   
+| 1190 | heatingroom                  | 2400 | waste container                 
+| 1200 | fuel depot                   | 2410 | motor pool                      
+| 1210 | hobby room                   | 2420 | washing-bay                     
+| 1220 | stable, hovel                | 2430 | installations room              
+| 1300 | cash office                  | 2440 | monitoring room                 
+| 1310 | ticket office                | 2450 | heating system                  
+| 1320 | conference room              | 2460 | public utility use              
+| 1330 | reception                    | 2470 | pump room                       
+| 1340 | sales room                   | 2480 | effluent treatment              
+| 1350 | store room                   | 2490 | treatment installation          
+| 1360 | delivery                     | 2500 | recycling installation          
+| 1370 | lounge, common room          | 2600 | chancel                         
+| 1380 | escalator                    | 2610 | sacristy                        
+| 1390 | guest toilet                 | 2620 | bell tower                      
+| 1400 | strong room                  | 2630 | baptism room                    
+| 1500 | office                       | 2640 | confessional                    
+| 1510 | entrance hall                | 2650 | benches                         
+| 1520 | elevator                     | 2660 | pulpit                          
+| 1530 | canteen                      | 2670 | lobby                           
+| 1540 | tea kitchen / Coffee kitchen | 2680 | parish                          
+| 1550 | archive                      | 2690 | chapel                          
+| 1560 | citizen office               | 2700 | police station                  
+| 1570 | conference hall              | 2710 | headquarters                    
+| 1580 | copier room / blueprint room | 2720 | prison cell                     
+| 1590 | information                  | 2730 | motor pool hall                 
+| 1600 | computer room                | 2740 | fire brigade, emergency vehicle 
+| 1610 | printer / plotter room       | 2750 | relaxation room                 
+| 1700 | reception                    | 2760 | tool / pipe store               
+| 1710 | guest room                   | 2770 | emergency call center           
+| 1720 | bar                          | 2780 | arms depot                      
+| 1730 | breakfast room               | 2790 | ammunition dump                 
+| 1740 | dining room                  | 2800 | vehicle hall                    
+| 1750 | celebration room             | 2810 | panic room                      
+| 1760 | pub                          | 2900 | satellite receiver              
+| 1770 | beer garden                  | 2910 | communication room              
+| 1780 | restaurant                   | 3000 | industrial building             
+| 1790 | cool store                   | 3010 | production building             
+| 1800 | bowling alley, shoot alley   | 3020 | factory building                
+| 1810 | lounge                       | 3030 | workshop                        
+| 1820 | canteen kitchen              | 3040 | storage depot                   
+| 1900 | stage                        | 3050 | cold storage                    
+| 1910 | auditorium                   | 3060 | store                           
+| 1920 | VIP box                      | 3100 | station concourse               
+| 1930 | projection room              | 3110 | track                           
+| 1940 | dressing room                | 3120 | ticket office                   
+| 1950 | cabin                        | 3130 | waiting hall                    
+| 1960 | showroom                     | 3140 | engine shed                     
+| 1970 | equipment or props           | 3150 | signal box                      
+| 1980 | make-up room                 | 3160 | departure terminal              
+| 1990 | recording studio             | 3170 | check-out counter               
+| 2000 | sound studio                 | 3180 | check-in counter                
+| 2010 | music archive                | 3190 | check                           
+| 2020 | administration               | 3200 | baggage carousel                
+| 2030 | ticket office                | 3210 | security check                  
+| 2040 | library                      | 3300 | classroom                       
+| 2050 | media room                   | 3310 | staff room                      
+| 2060 | dressing room                | 3320 | break or recess hall            
+| 2070 | sport room                   | 3330 | laboratory                      
+| 2080 | equipment room               | 3340 | utility room                    
+| 2090 | platform                     | 3350 | media room                      
+| 2100 | swimming-pool                | 3360 | science laboratory              
+| 2110 | slide                        | 3370 | sports hall                     
+| 2120 | relaxation room              | 3380 | school library                  
+| 2130 | sauna                        | 3390 | office                          
+| 2140 | fitness room                 | 3400 | lecture theatre                 
+| 2150 | solarium                     | 3410 | refectory                       
+| 2160 | catering                     | 3420 | function room                   
+|===
+
+=== 隧道模块
+
+|===
+4+|  *___AbstractTunnel__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_class.xml
+| 1000 | traffic    | 1030 | others 
+| 1010 | supply     |      |        
+| 1020 | historical |      |        
+|===
+
+|===
+4+|  *___AbstractTunnel__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml
+http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml
+| 1000 | railway tunnel | 1020 | canal tunnel    
+| 1010 | roadway tunnel | 1030 | pedestrian tunnel 
+|===
+
+=== 桥梁模块
+
+|===
+4+|  *___AbstractBridge__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_class.xml
+| 1000 | arced bridge          | 1040 | truss bridge      
+| 1010 | cable-stayed bridge   | 1050 | pontoon bridge    
+| 1020 | deck bridge           | 1060 | suspension bridge 
+| 1030 | cable-stayed overpass |      |                    
+|===
+
+|===           
+4+|  *___AbstractBridge__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml
+http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml     
+| 1000 | railway bridge        | 1040 | canal bridge      
+| 1010 | roadway bridge        | 1050 | aqueduct          
+| 1030 | cable link            | 1060 | foot bridge       
+|===
+
+=== 城市家具模块
+
+|===
+4+|  *__CityFurniture__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_class.xml
+| 1000 | traffic                          | 1020 | security                          
+| 1010 | communication                    | 1030 | others                                             
+|===
+
+|===           
+4+|  *__CityFurniture__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml
+http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml                                  
+| 1000 | communication fixture            | 1270 | pole                              
+| 1010 | telephone box                    | 1280 | radio mast                        
+| 1020 | postbox                          | 1290 | aerial                            
+| 1030 | emergency call fixture           | 1300 | radio telescope                   
+| 1040 | fire detector                    | 1310 | chimney                           
+| 1050 | police call post                 | 1320 | marker                            
+| 1060 | switching unit                   | 1330 | hydrant                           
+| 1070 | road sign                        | 1340 | upper corridor fire-hydrant       
+| 1080 | traffic light                    | 1350 | lower floor panel fire-hydrant    
+| 1090 | free-standing sign               | 1360 | slidegate valve cap               
+| 1100 | free-standing warning sign       | 1370 | entrance shaft                    
+| 1110 | bus stop                         | 1380 | converter                         
+| 1120 | milestone                        | 1390 | stair                             
+| 1130 | rail level crossing              | 1400 | outside staircase                 
+| 1140 | gate                             | 1410 | escalator                         
+| 1150 | streetlamp, latern or candelabra | 1420 | ramp                              
+| 1160 | column                           | 1430 | patio                             
+| 1170 | lamp post                        | 1440 | fence                             
+| 1180 | flagpole                         | 1450 | memorial/monument                 
+| 1190 | street sink box                  | 1470 | wayside shrine                    
+| 1200 | rubbish bin                      | 1480 | crossroads                        
+| 1210 | clock                            | 1490 | cross on the summit of a mountain 
+| 1220 | directional spot light           | 1500 | fountain                          
+| 1230 | floodlight mast                  | 1510 | block mark                        
+| 1240 | windmill                         | 1520 | boundary post                     
+| 1250 | solar cell                       | 1530 | bench                             
+| 1260 | water wheel                      | 1540 | others                            
+|===
+
+=== 土地利用模块
+
+|===
+4+|  *__LandUse__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_class.xml
+| 1000 | Settlement Area                | 3000 | Vegetation         
+| 1100 | Undeveloped Area               | 4000 | Water              
+| 2000 | Traffic                        |      |                                      
+|===
+
+|===
+4+|  *__LandUse__的__function__和__usage__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml
+http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml
+| 1010 | Residential                    | 2050 | Track              
+| 1020 | Industry and Business          | 2060 | Square             
+| 1030 | Mixed use                      | 3010 | Grassland          
+| 1040 | Special Function Area          | 3020 | Agriculture        
+| 1050 | Monument                       | 3030 | Forest             
+| 1060 | Dump                           | 3040 | Grove              
+| 1070 | Mining                         | 3050 | Heath              
+| 1110 | Park                           | 3060 | Moor               
+| 1120 | Cemetary                       | 3070 | Marsh              
+| 1130 | Sports, leisure and recreation | 3080 | Untilled land      
+| 1140 | Open pit, quarry               | 4010 | River              
+| 2010 | Road                           | 4020 | Standing Waterbody 
+| 2020 | Railway                        | 4030 | Harbour            
+| 2030 | Airfield                       | 4040 | Sea                
+| 2040 | Shipping                       |      |                    
+|===
+
+=== 矿物模块
+
+|===
+4+|  *__ImplicitGeometry__（__Core__模块）和__Texture__（__Appearance__模块）的__mimeType__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml
+http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml
+4+| 此表中给出的MIME类型由Internet号码分配机构（IANA）定义。请参阅 http://www.iana.org/。 通常，MIME格式由Internet工程任务组（IETF）进行标准化工作。请参阅 http://www.ietf.org/ 。与其他代码列表不同，MIME类型并非由数字表示，而是使用它们给定的标识符。此代码列表并不详尽。它仅包含一系列常用的MIME类型。
+| model/vrml                    | VRML97       | model/x3d+xml    | X3D                  
+| application/x-3ds             | 3ds max      | model/x3d+binary | X3D                  
+| application/dxf               | AutoCad DXF  | image/gif        | *.gif images         
+| application/x-autocad         | AutoCad DXF  | image/jpeg       | *.jpeg, *.jpg images 
+| application/x-dxf             | AutoCad DXF  | image/png        | *.png images         
+| application/acad              | AutoCad DWG  | image/tiff       | *.tiff, *.tif images 
+| application/x-shockwave-flash | Shockwave 3D | image/bmp        | *.bmp images         
+| model/x3d+vrml                | X3D          |                  |                      
+|===
+
+=== 植被模块
+
+|===
+4+|  *__SolitaryVegetationObject__的__class__属性的代码列表*                                 
+4+| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_class.xml
+| 1000 | shrub              | 1060 | coniferous tree 
+| 1010 | low plants         | 1070 | decidous tree   
+| 1020 | medium high plants | 1080 | bushes          
+| 1030 | high plants        | 1090 | aquatic plants  
+| 1040 | grasses            | 1100 | climber         
+| 1050 | ferns              | 9999 | unknown         
+|===
+
+|===
+|  *__SolitaryVegetationObject__的__function__和__usage__属性的代码列表*                                 
+| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml
+http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml
+| 代码列表与__SolitaryVegetationObject__的__class__属性相同。
+|===
+
+|===
+4+| *__PlantCover__的__class__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_class.xml
+| 1010 | Lemnetea                      | 1280 | Arrhenatheretea                          
+| 1020 | Asplenietea rupestris         | 1290 | Molinio-Juncetea                         
+| 1030 | Adiantetea                    | 1300 | Scheuchzerio-Caricetea fuscae azidophile 
+| 1040 | Thlaspietea rotundifolii      | 1310 | Festuco-Brometea                         
+| 1050 | Crithmo-Limonietea            | 1320 | Elyno-Seslerietea                        
+| 1060 | Ammophietea                   | 1330 | Caricetea curvulae azidophile            
+| 1070 | Cakiletea maritimae halophile | 1340 | Calluno-Ulicetea                         
+| 1080 | Secalinetea                   | 1350 | Oxycocco-Sphagnetea                      
+| 1090 | Chenopodietea                 | 1360 | Salicetea purpureae                      
+| 1100 | Onopordetea                   | 1370 | Betulo-Adenostyletea                     
+| 1110 | Epilobietea angustifolii      | 1380 | Alnetea glutinosae                       
+| 1120 | Bidentetea tripartiti         | 1390 | Erico-Pinetea                            
+| 1130 | Zoosteretea marinae halophile | 1400 | Vaccinio-Piceetea                        
+| 1140 | Ruppietea maritimae           | 1410 | Quercetea robori-petraeae                
+| 1150 | Potametea haftende            | 1420 | Querco-Fagetea                           
+| 1160 | Litorelletea                  | 1430 | Crithmo-Staticetea                       
+| 1170 | Plantaginetea majoris         | 1440 | Tuberarietea guttati                     
+| 1180 | Isoeto-Nanojuncetea           | 1450 | Juncetea maritimae                       
+| 1190 | Montino-Cardaminetea          | 1460 | Thero-Brachypodietea                     
+| 1200 | Corynephoretea                | 1470 | Ononido-Rosmarinetea                     
+| 1210 | Asteretea tripolium           | 1480 | Nerio-Tamaricetea                        
+| 1220 | Salicornietea                 | 1490 | Pegano-Salsoletea                        
+| 1230 | Juncetea maritimi             | 1500 | Cisto-Lavanduletea                       
+| 1240 | Phragmitetea                  | 1510 | Quercetea ilicis                         
+| 1250 | Spartinetea                   | 1520 | Populetea albae                          
+| 1260 | Sedo-Scleranthetea            | 9999 | unknown                                  
+| 1270 | Salicetea herbaceae           |      |                                          
+|===
+
+|===
+|  *__PlantCover__的__function__和__usage__属性的代码列表*                                 
+| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml
+http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml
+| 代码列表与__PlantCover的__class__属性相同。
+|===
+
+|===
+4+| *__SolitaryVegetationObject__的__species__属性的代码列表（节选）*
+4+| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_species.xml
+| 1640 | Abies alba             | 1790 | Acer circinatum                 
+| 1650 | Abies cephalonica      | 1800 | Acer Davidii                    
+| 1660 | Abies concolor         | 1810 | Acer ginnala Maxim              
+| 1670 | Abies grandis          | 1820 | Acer grosserii                  
+| 1680 | Abies homolepsis       | 1830 | Acer monspessulanum             
+| 1690 | Abies koreana          | 1840 | Acer negundo                    
+| 1700 | Abies lasiocarpa       | 1850 | Acer palmatum                   
+| 1710 | Abies nordmanniana     | 1860 | Acer platanoides                
+| 1720 | Abies pinsapo          | 1870 | Acer platanoides 'Crimson King' 
+| 1730 | Abies procera          | 1880 | Acer pseudoplatanus             
+| 1740 | Abies procera 'Glauca' | 1890 | Acer rubrum                     
+| 1750 | Abies veitchii         | 1900 | Acer saccharinum                
+| 1760 | Acer campéstre         | 1910 | Acer saccharum Marsch           
+| 1770 | Acer capillipes        | 1920 | Acer tartaricum                 
+| 1780 | Acer cappadocicum      | …   | …                              
+|===
+
+=== 交通模块
+
+|===
+4+| *__AuxiliaryTrafficArea__的__function__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/AuxiliaryTrafficArea_function.xml
+| 1000 | soft shoulder            | 1300 | traffic island          
+| 1010 | hard shoulder            | 1400 | bank                    
+| 1020 | green area               | 1410 | embankment, dike        
+| 1030 | middle lane              | 1420 | railroad embankment     
+| 1040 | lay by                   | 1430 | noise protection        
+| 1100 | parking bay              | 1440 | noise protection wall   
+| 1200 | ditch                    | 1500 | noise guard bar         
+| 1210 | drainage                 | 1600 | towpath                 
+| 1220 | kerbstone                | 1700 | others                  
+| 1230 | flower tub               |      |                                         
+|===
+
+|===
+4+| *__TrafficArea__的__function__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_function.xml 
+| 1    | driving_lane             | 20   | crosswalk               
+| 2    | footpath                 | 21   | barrier                 
+| 3    | cyclepath                | 22   | stairs                  
+| 4    | combined foot-/cyclepath | 23   | escalator               
+| 5    | square                   | 24   | filtering lane          
+| 6    | car_park                 | 25   | airport_runway          
+| 7    | parking_lay_by           | 26   | airport_taxiway         
+| 8    | rail                     | 27   | airport_apron           
+| 9    | rail_road_combined       | 28   | airport_heliport        
+| 10   | drainage                 | 29   | airport_runway_marking  
+| 11   | road marking             | 30   | green spaces            
+| 12   | road_marking_direction   | 31   | recreation              
+| 13   | road_marking_lane        | 32   | bus_lay_by              
+| 14   | road_marking_restricted  | 33   | motorway                
+| 15   | road_marking_crosswalk   | 34   | motorway_entry          
+| 16   | road_marking_stop        | 35   | motorway_exit           
+| 17   | road_marking_other       | 36   | motorway_emergency lane 
+| 18   | overhead wire (trolley)  | 37   | private_area            
+| 19   | train platform           | 9999 | unknown                 
+|===
+
+|===
+4+| *__TrafficArea__的__usage__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_usage.xml
+| 1    | pedestrian       | 9    | boat, ferry, ship 
+| 2    | car              | 10   | teleferic         
+| 3    | truck            | 11   | aeroplane         
+| 4    | bus, taxi        | 12   | helicopter        
+| 5    | train            | 13   | taxi              
+| 6    | bicycle          | 14   | horse             
+| 7    | motorcycle       | 9999 | unknown           
+| 8    | tram, streetcar  |      |                          
+|===
+
+|===
+4+| *__TrafficArea__的__AuxiliaryTrafficArea__和__surfaceMaterial__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_surfaceMaterial.xml
+| 1    | asphalt          | 8    | soil              
+| 2    | concrete         | 9    | sand              
+| 3    | pavement         | 10   | grass             
+| 4    | cobblestone      | 11   | wood              
+| 5    | gravel           | 12   | steel             
+| 6    | rail_with_bed    | 13   | marble            
+| 7    | rail_without_bed | 9999 | unknown                   
+|===
+
+|===
+4+| *__TransportationComplex__的__class__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_class.xml
+| 1000 | private          | 1050 | air traffic       
+| 1010 | common           | 1060 | rail traffic      
+| 1020 | civil            | 1070 | waterway          
+| 1030 | military         | 1080 | subway            
+| 1040 | road traffic     | 1090 | others            
+|===
+
+|===
+4+| *__TransportationComplex__的__function__和__usage__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml
+http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_usage.xml
+| 1000 | road                                  | 1855 | railway track                  
+| 1010 | freeway/motorway                      | 1860 | magnetic levitation train      
+| 1020 | highway/national primary road         | 1900 | railway station                
+| 1030 | land road                             | 1910 | stop                           
+| 1040 | district road                         | 1920 | station                        
+| 1050 | municipal road                        | 2000 | power-wheel                    
+| 1060 | main through-road                     | 2100 | airport                        
+| 1100 | freeway interchange/ highway junction | 2110 | international airport          
+| 1110 | junction                              | 2120 | regional airport               
+| 1200 | road                                  | 2130 | landing place                  
+| 1210 | driveway                              | 2140 | heliport                       
+| 1220 | footpath/footway                      | 2150 | landing place                  
+| 1230 | hiking trail                          | 2160 | gliding airfield               
+| 1240 | bikeway/cycle-path                    | 2170 | taxiway                        
+| 1250 | bridleway/bridlepath                  | 2180 | apron                          
+| 1260 | main agricultural road                | 2190 | runway                         
+| 1270 | agricultural road                     | 2200 | canal                          
+| 1280 | bikeway/footway                       | 2300 | harbor                         
+| 1290 | access road                           | 2310 | pleasure craft harbour         
+| 1300 | dead-end road                         | 2400 | ferry                          
+| 1400 | lane                                  | 2410 | car ferry                      
+| 1410 | lane, one direction                   | 2420 | train ferry                    
+| 1420 | lane, both direction                  | 2430 | ferry                          
+| 1500 | pedestrian zone                       | 2500 | landing stage                  
+| 1600 | place                                 | 2600 | waterway I order               
+| 1610 | parking area                          | 2610 | navigable river                
+| 1620 | marketplace                           | 2620 | inland navigation waterway 0   
+| 1700 | service area                          | 2621 | inland navigation waterway 0   
+| 1800 | rail transport                        | 2622 | inland navigation waterway I   
+| 1805 | rail                                  | 2623 | inland navigation waterway II  
+| 1810 | urban/city train                      | 2624 | inland navigation waterway III 
+| 1815 | city railway                          | 2625 | inland navigation waterway IV  
+| 1820 | tram                                  | 2626 | inland navigation waterway V   
+| 1825 | subway                                | 2627 | inland navigation waterway VI  
+| 1830 | funicular/mountain railway            | 2628 | inland navigation waterway VII 
+| 1835 | mountain railway                      | 2630 | maritime navigation            
+| 1840 | chairlift                             | 2640 | navigable lake                 
+| 1845 | ski-lift/ski tow lift                 | 2700 | others                         
+| 1850 | suspension railway                    |      |                                
+|===
+
+=== 水体模块
+
+|===
+4+| *__WaterBody__的__class__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_class.xml
+| 1000                                               | sea                            | 1140                             | flooded land                    
+| 1010                                               | tidal waterbody                | 1150                             | artificial waterbody            
+| 1020                                               | watercourse                    | 1160                             | aqueduct                        
+| 1030                                               | river / stream                 | 1170                             | canal                           
+| 1040                                               | ditch                          | 1180                             | port basin                      
+| 1050                                               | spring / water hole            | 1190                             | reservior                       
+| 1060                                               | lake / pont                    | 1200                             | excavation pont                 
+| 1070                                               | bayou                          | 1210                             | moat                            
+| 1080                                               | body of standing water         | 1220                             | pool                            
+| 1090                                               | waterfall                      | 1230                             | fountain                        
+| 1100                                               | rapids                         | 1240                             | well                            
+| 1110                                               | swamp                          | 1250                             | cistern                         
+| 1120                                               | sinkhole (karst)               | 1260                             | fish ladder                     
+| 1130                                               | ephemeral watercourse          | 9999                             | unknown                                                        
+|===
+
+|===
+4+| *__WaterBody__的__function__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_function.xml
+| 1000                                               | nature-sanctuary               | 1090                             | public swimming                 
+| 1010                                               | protected waterbody            | 1100                             | public fountain                 
+| 1020                                               | reservoir                      | 1110                             | private waterbody               
+| 1030                                               | retention waterbody            | 1120                             | irrigation waterbody            
+| 1040                                               | flood plain waterbody          | 1130                             | watering place                  
+| 1050                                               | waterway                       | 1140                             | industrial waterbody            
+| 1060                                               | habor waterbody                | 1150                             | waterbody for fire-fighting     
+| 1070                                               | sluice waterbody               | 9999                             | unknown                         
+| 1080                                               | sewage system                  |                                  |                                 
+|===
+
+|=== 
+4+| *__WaterBody__的__usage__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_usage.xml
+| 1000                                               | sanctuary                      | 1110                             | industrial / craft water supply 
+| 1010                                               | recreation / sports            | 1120                             | military use                    
+| 1020                                               | drinking water supply          | 1130                             | mining / excavation             
+| 1030                                               | hydroelectric water supply     | 1140                             | irrigation water supply         
+| 1040                                               | ocean shipping                 | 1150                             | fishing water                   
+| 1050                                               | inland shipping                | 1160                             | fish farm                       
+| 1060                                               | sewer                          | 1170                             | archaeological site             
+| 1070                                               | port                           | 1180                             | water protection area           
+| 1080                                               | anchorage                      | 1190                             | abandoned                       
+| 1090                                               | public use                     | 9999                             | unknown                         
+| 1100                                               | private use                    |                                  |                                                               
+|===
+
+|===
+4+| *__WaterBody__的__waterLevel__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterSurface_waterLevel.xml
+| 1000 | MSL - Mean Sea Level                               | 1090 | Hundred Year Flood               
+| 1010 | LAT - Lowest Astronomical Tide                     | 1100 | highest known water level        
+| 1020 | National Water Level                               | 1110 | critical low-water level         
+| 1030 | Mean High Tide (related to National Waterlevel)    | 1120 | lowest known water level         
+| 1040 | Extreme High Tide (related to National Waterlevel) | 1130 | Established Line of Navigability 
+| 1050 | Mean Low Tide (related to National Waterlevel)     | 1140 | Minimum Limit of Navigability    
+| 1060 | Extreme Low Tide (related to National Waterlevel)  | 1150 | Maximum Limit of Navigability    
+| 1070 | Mean Water Level (watercourse)                     | 9999 | unknown                          
+| 1080 | critical high-water level                          |      |                                  
+|===
+
+=== 城市对象组模块
+
+|===
+4+| *__CityObjectGroup__的__class__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_class.xml
+| 1000 | building separation    | 2000 | assembly                      
+|===
+
+|===
+4+| *__CityObjectGroup__的__function__和__usage__属性的代码列表*
+4+| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml
+http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_usage.xml
+| 1000 | lod1Storey | 1020 | lod3Storey 
+| 1010 | lod2Storey | 1030 | lod4Storey 
+|===

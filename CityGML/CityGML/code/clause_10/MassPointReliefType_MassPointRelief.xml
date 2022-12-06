@@ -1,0 +1,13 @@
+<xs:complexType name="MassPointReliefType">
+    <xs:complexContent>
+        <xs:extension base="AbstractReliefComponentType">
+            <xs:sequence>
+                <xs:element name="reliefPoints" type="gml:MultiPointPropertyType"/>
+                <xs:element ref="_GenericApplicationPropertyOfMassPointRelief" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="MassPointRelief" type="MassPointReliefType" substitutionGroup="_ReliefComponent"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfMassPointRelief" type="xs:anyType" abstract="true"/>

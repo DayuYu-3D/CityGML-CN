@@ -1,0 +1,12 @@
+<xs:complexType name="DoorType">
+    <xs:complexContent>
+        <xs:extension base="AbstractOpeningType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfDoor" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="Door" type="DoorType" substitutionGroup="_Opening"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfDoor" type="xs:anyType" abstract="true"/>

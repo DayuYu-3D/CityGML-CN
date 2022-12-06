@@ -1,0 +1,26 @@
+<xs:complexType name="AddressPropertyType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="Address"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:complexType name="AddressType">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+                <xs:element name="xalAddress" type="xalAddressPropertyType"/>
+                <xs:element name="multiPoint" type="gml:MultiPointPropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfAddress" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:element name="Address" type="AddressType" substitutionGroup="gml:_Feature"/>
+<!-- ========================================================================================== -->
+<xs:element name="_GenericApplicationPropertyOfAddress" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================== -->
+<xs:complexType name="xalAddressPropertyType">
+    <xs:sequence>
+        <xs:element ref="xAL:AddressDetails"/>
+    </xs:sequence>
+</xs:complexType>

@@ -1,0 +1,20 @@
+<xs:complexType name="TINReliefType">
+    <xs:complexContent>
+        <xs:extension base="AbstractReliefComponentType">
+            <xs:sequence>
+                <xs:element name="tin" type="tinPropertyType"/>
+                <xs:element ref="_GenericApplicationPropertyOfTinRelief" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="TINRelief" type="TINReliefType" substitutionGroup="_ReliefComponent"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTinRelief" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="tinPropertyType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="gml:TriangulatedSurface"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>

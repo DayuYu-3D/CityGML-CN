@@ -1,0 +1,37 @@
+== 规范性引用文件
+
+以下规范性文件所包含的条款，通过在本文中的引用，构成了OGC 12-019的这一部分的规定。凡是标注日期的引用文件，其之后的修改或修订均不适用。但是鼓励根据OGC 12-019达成协议的各方研究，应用下列规范性文件的最新版本。凡是不注日期的引用文件，其最新版本适用于本标准。
+
+以下所列文件对于CityGML标准的应用是不可或缺的。除采用GML 3.1.1的几何模型之外，也使用了一些其它的附加概念，如隐式几何（参见第8.2章）、外观模型（参见第9章）借鉴了X3D和COLLADA的概念，以及地址使用OASIS可扩展地址语言xAL表示。
+
+* ISO 8601:2004, _Data elements and interchange formats – Information interchange – Representation of dates and times_ 
+* ISO/TS 19103:2005, _Geographic Information – Conceptual Schema Language_ 
+* ISO 19105:2000, _Geographic information – Conformance and testing_ 
+* ISO 19107:2003, _Geographic Information – Spatial Schema_ 
+* ISO 19109:2005, _Geographic Information – Rules for Application Schemas_ +
+* ISO 19111:2003, _Geographic information – Spatial referencing by coordinates_ +
+* ISO 19115:2003, _Geographic Information – Metadata_ +
+* ISO 19123:2005, _Geographic Information – Coverages_ +
+* ISO/TS 19139:2007, _Geographic Information – Metadata – XML schema implementation_ +
+* ISO/IEC 19775:2004, _X3D Abstract Specification_ +
+* OpenGIS® Abstract Specification Topic 0, _Overview, OGC document 04-084_ +
+* OpenGIS® Abstract Specification Topic 5, _The OpenGIS Feature, OGC document 99-105r2_ +
+* OpenGIS® Abstract Specification Topic 8, _Relations between Features, OGC document 99-108r2_ +
+* OpenGIS® Abstract Specification Topic 10, _Feature Collections, OGC document 99-110_ +
+* OpenGIS® Geography Markup Language Implementation Specification, _Version 3.1.1, OGC document 03-105r1_ +
+* OpenGIS® GML 3.1.1 Simple Dictionary Profile, _Version 1.0.0, OGC document 05-099r2_ +
+* IETF RFC 2045 & 2046, _Multipurpose Internet Mail Extensions (MIME). (November 1996)_ +
+* IETF RFC 2396, _Uniform Resource Identifiers (URI): Generic Syntax. (August 1998)_ +
+* W3C XLink, _XML Linking Language (XLink) Version 1.0. W3C Recommendation (27 June 2001)_ +
+* W3C XMLName, _Namespaces in XML. W3C Recommendation (14 January 1999)_ +
+* W3C XMLSchema-1, _XML Schema Part 1: Structures. W3C Recommendation (2 May 2001)_ +
+* W3C XMLSchema-2, _XML Schema Part 2: Datatypes. W3C Recommendation (2 May 2001)_ +
+* W3C XPointer, _XML Pointer Language (XPointer) Version 1.0. W3C Working Draft (16 August 2002)_ +
+* W3C XML Base, _XML Base, W3C Recommendation (27 June 2001)_ +
+* W3C XML, _Extensible Markup Language (XML) 1.0 (Second Edition), W3C Recommendation (6 October 2000)_ +
+* OASIS (Organization for the Advancement of Structured Information Standards): extensible Address Language (xAL v2.0). +
+* Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.4.1 +
+* The Schematron Assertion Language 1.5. Rick Jelliffe 2002-10-01
+
+
+

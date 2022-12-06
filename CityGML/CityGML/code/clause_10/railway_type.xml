@@ -1,0 +1,13 @@
+<xs:complexType name="RailwayType">
+    <xs:complexContent>
+        <xs:extension base="TransportationComplexType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfRailway" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="Railway" type="RailwayType" substitutionGroup="TransportationComplex"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfRailway" type="xs:anyType" abstract="true"/>

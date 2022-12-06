@@ -1,0 +1,12 @@
+<xs:complexType name="GroundSurfaceType">
+    <xs:complexContent>
+        <xs:extension base="AbstractBoundarySurfaceType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfGroundSurface" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="GroundSurface" type="GroundSurfaceType" substitutionGroup="_BoundarySurface"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfGroundSurface" type="xs:anyType" abstract="true

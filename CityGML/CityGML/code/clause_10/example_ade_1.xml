@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.citygml.org/ade/noise_de/2.0"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:core="http://www.opengis.net/citygml/2.0"
+    xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
+    xmlns:frn="http://www.opengis.net/citygml/cityfurniture/2.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"targetNamespace="http://www.citygml.org/ade/noise_de/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+    <xsd:import namespace="http://www.opengis.net/citygml/2.0" schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
+    <xsd:import namespace="http://www.opengis.net/citygml/transportation/2.0" schemaLocation="http://schemas.opengis.net/citygml/transportation/2.0/transportation.xsd"/>
+    <xsd:import namespace="http://www.opengis.net/citygml/building/2.0" schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
+    <xsd:import namespace="http://www.opengis.net/citygml/cityfurniture/2.0" schemaLocation="http://schemas.opengis.net/citygml/cityfurniture/2.0/cityFurniture.xsd"/>
+ … 
+    <xsd:element name="buildingReflection" type="xsd:string" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+    <xsd:element name="buildingHabitants" type="xsd:positiveInteger" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+ …
+    <xsd:element name="noiseCityFurnitureSegmentProperty" type="NoiseCityFurnitureSegmentPropertyType" substitutionGroup="frn:_GenericApplicationPropertyOfCityFurniture"/>
+    <!-- ============================================================================================ -->
+    <xsd:complexType name="NoiseCityFurnitureSegmentPropertyType">
+        <xsd:sequence minOccurs="0">
+            <xsd:element ref="NoiseCityFurnitureSegment" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xsd:complexType>
+    <!-- ============================================================================================ -->
+    <xsd:complexType name="NoiseCityFurnitureSegmentType">
+        <xsd:complexContent>
+            <xsd:extension base="core:AbstractCityObjectType">
+                <xsd:sequence>
+                    <xsd:element name="type" type="NoiseCityFurnitureSegmentTypeType" minOccurs="0"/>
+                    <xsd:element name="reflection" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="reflectionCorrection" type="gml:MeasureType" minOccurs="0"/>
+                    <xsd:element name="height" type="gml:LengthType" minOccurs="0"/>
+                    <xsd:element name="distance" type="gml:LengthType" minOccurs="0"/>
+                    <xsd:element name="lod0BaseLine" type="gml:CurvePropertyType"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <!-- ============================================================================================ -->
+    <xsd:element name="NoiseCityFurnitureSegment" type="NoiseCityFurnitureSegmentType" substitutionGroup="core:_CityObject"/>
+ …
+ </xsd:schema>

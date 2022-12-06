@@ -1,0 +1,12 @@
+<xs:complexType name="BridgePartType">
+    <xs:complexContent>
+        <xs:extension base="AbstractBridgeType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfBridgePart" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="BridgePart" type="BridgePartType" substitutionGroup="_AbstractBridge"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfBridgePart" type="xs:anyType" abstract="true"/>

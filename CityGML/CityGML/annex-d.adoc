@@ -1,0 +1,29 @@
+[appendix]
+:appendix-caption: Annex
+== （资料性附录）采用的GML3几何类概述
+
+|===
+| Abstract GML classes referenced in CityGML  | GML subclass actually used in CityGML                                                                  
+| _Geometry        |                                                                                                        
+| _Solid           |Solid (boundary is restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)  
+|                  |CompositeSolid                                                                                                       
+| _Surface         | Polygon (with holes, modelled by _Rings. The boundary is restricted to LineStrings or CompositeCurves) 
+|                  |OrientableSurface                                                                                                       
+|                  |TexturedSurface (defined in CityGML’s __TexturedSurface__ module, not in GML. This modelling approach has been marked deprecated) 
+|                  |CompositeSurface (members are restricted to Orienta- bleSurfaces, TexturedSurfaces, Polygons or Compo- siteSurfaces)                                                                                                        
+|                  |TriangulatedSurface                                                                                                                                                         
+|                  |TIN                                                                                                                              
+| _Curve           | LineString                                                                                             
+|                  |CompositeCurve (members are restricted to LineStrings or CompositeCurves)
+|                  |                                                                                                           
+|                  |Point
+|                  |                                                                                                                                                                      
+| _Coverage        | RectifiedGridCoverage
+|                  |
+| _AbstractGeometricAggregate   | MultiSolid                                                                                             
+|                  |MultiSurface (members are restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces) 
+|                  |MultiCurve (members are restricted to LineStrings or CompositeCurves) 
+|                  |MultiPoint
+|                  |
+|                  |GeometricComplex (restricted to connected, linear networks)
+|===

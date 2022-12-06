@@ -1,0 +1,12 @@
+<xs:complexType name="BuildingType">
+    <xs:complexContent>
+        <xs:extension base="AbstractBuildingType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfBuilding" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="Building" type="BuildingType" substitutionGroup="_AbstractBuilding"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfBuilding" type="xs:anyType" abstract="true"/>

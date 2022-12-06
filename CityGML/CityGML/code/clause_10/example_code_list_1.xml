@@ -1,0 +1,19 @@
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/profiles/SimpleDictionary/1.0.0/gmlSimpleDictionaryProfile.xsd"
+    gml:id="roofType">
+    <gml:name>roofType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="id357">
+            <gml:description>flat roof</gml:description>
+            <gml:name>1000</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="id358">
+            <gml:description>monopitch roof</gml:description>
+            <gml:name>1010</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    … 
+</gml:Dictionary>

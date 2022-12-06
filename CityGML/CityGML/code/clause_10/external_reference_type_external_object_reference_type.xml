@@ -1,0 +1,12 @@
+<xs:complexType name="ExternalReferenceType">
+    <xs:sequence>
+        <xs:element name="informationSystem" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="externalObject" type="ExternalObjectReferenceType"/>
+    </xs:sequence>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:complexType name="ExternalObjectReferenceType">
+    <xs:choice>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="uri" type="xs:anyURI"/>
+    </xs:choice>
+</xs:complexType>

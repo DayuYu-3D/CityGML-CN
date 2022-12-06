@@ -1,0 +1,40 @@
+<xs:complexType name="AbstractBridgeType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="core:AbstractSiteType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="yearOfConstruction" type="xs:gYear" minOccurs="0"/>
+                <xs:element name="yearOfDemolition" type="xs:gYear" minOccurs="0"/>
+                <xs:element name="isMovable" type="xs:boolean" default="false" minOccurs="0"/>
+                <xs:element name="lod1Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod1MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod2Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod2MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod2TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="outerBridgeConstruction" type="BridgeConstructionElementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="outerBridgeInstallation" type="BridgeInstallationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="interiorBridgeInstallation" type="IntBridgeInstallationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod3Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod3MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod3TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod4Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod4MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod4TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="interiorBridgeRoom" type="InteriorBridgeRoomPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="consistsOfBridgePart" type="BridgePartPropertyType" minOccurs="0" maxOccurs
+                <xs:element name="address" type="core:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfAbstractBridge" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType><!-- ========================================================================================= -->
+<xs:element name="_AbstractBridge" type="AbstractBridgeType" abstract="true" substitutionGroup="core:_Site"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfAbstractBridge" type="xs:anyType" abstract="true

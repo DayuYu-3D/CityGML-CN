@@ -1,0 +1,28 @@
+<xs:complexType name="SolitaryVegetationObjectType">
+    <xs:complexContent>
+        <xs:extension base="AbstractVegetationObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="species" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="height" type="gml:LengthType" minOccurs="0"/>
+                <xs:element name="trunkDiameter" type="gml:LengthType" minOccurs="0"/>
+                <xs:element name="crownDiameter" type="gml:LengthType" minOccurs="0"/>
+                <xs:element name="lod1Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod2Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod3Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod4Geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                <xs:element name="lod1ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="lod2ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="lod3ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element name="lod4ImplicitRepresentation" type="core:ImplicitRepresentationPropertyType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfSolitaryVegetationObject" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="SolitaryVegetationObject" type="SolitaryVegetationObjectType" substitutionGroup="_VegetationObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfSolitaryVegetationObject" type="xs:anyType" abstract="true"/>

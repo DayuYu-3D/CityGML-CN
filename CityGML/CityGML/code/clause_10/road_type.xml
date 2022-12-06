@@ -1,0 +1,13 @@
+<xs:complexType name="RoadType">
+    <xs:complexContent>
+        <xs:extension base="TransportationComplexType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfRoad" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="Road" type="RoadType" substitutionGroup="TransportationComplex"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfRoad" type="xs:anyType" abstract="true"/>

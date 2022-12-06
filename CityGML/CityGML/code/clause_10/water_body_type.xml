@@ -1,0 +1,25 @@
+<xs:complexType name="WaterBodyType">
+    <xs:complexContent>
+        <xs:extension base="AbstractWaterObjectType">
+            <xs:sequence>
+                <xs:element name="class" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="function" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="usage" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="lod0MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod0MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
+                <xs:element name="lod1MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
+                <xs:element name="lod1Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod2Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod3Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="lod4Solid" type="gml:SolidPropertyType" minOccurs="0"/>
+                <xs:element name="boundedBy" type="BoundedByWaterSurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfWaterBody" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="WaterBody" type="WaterBodyType" substitutionGroup="_WaterObject"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfWaterBody" type="xs:anyType" abstract="true"/>

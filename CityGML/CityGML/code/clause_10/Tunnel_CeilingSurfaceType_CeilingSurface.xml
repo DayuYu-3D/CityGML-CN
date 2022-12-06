@@ -1,0 +1,11 @@
+<xs:complexType name="CeilingSurfaceType">
+    <xs:extension base="AbstractBoundarySurfaceType">
+        <xs:sequence>
+            <xs:element ref="_GenericApplicationPropertyOfCeilingSurface" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:extension>
+</xs:complexContent>
+</xs:complexType><!-- ========================================================================================== -->
+<xs:element name="CeilingSurface" type="CeilingSurfaceType" substitutionGroup="_BoundarySurface"/>
+<!-- ========================================================================================== -->
+<xs:element name="_GenericApplicationPropertyOfCeilingSurface" type="xs:anyType" abstract="true"/>

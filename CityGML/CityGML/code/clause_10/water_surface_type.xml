@@ -1,0 +1,14 @@
+<xs:complexType name="WaterSurfaceType">
+    <xs:complexContent>
+        <xs:extension base="AbstractWaterBoundarySurfaceType">
+            <xs:sequence>
+                <xs:element name="waterLevel" type="gml:CodeType" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfWaterSurface" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="WaterSurface" type="WaterSurfaceType" substitutionGroup="_WaterBoundarySurface"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfWaterSurface" type="xs:anyType" abstract="true"/>

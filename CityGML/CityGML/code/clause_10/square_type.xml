@@ -1,0 +1,13 @@
+<xs:complexType name="SquareType">
+    <xs:complexContent>
+        <xs:extension base="TransportationComplexType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfSquare" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="Square" type="SquareType" substitutionGroup="TransportationComplex"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfSquare" type="xs:anyType" abstract="true"/>
