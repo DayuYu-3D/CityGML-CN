@@ -5,7 +5,7 @@
 The CityGML2.0 Chinese version translated by OGC China.
 
 [PDF](./output/OGC中国联盟--OGC城市地理标记语言编码标准中文版.pdf) 
-and [HTML](./output/OGC中国联盟--OGC城市地理标记语言编码标准中文版.html)
+and [HTML](http://geos.whu.edu.cn/ogc/citygml/)
 
 ## How to contribute
 
