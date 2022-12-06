@@ -1,32 +1,40 @@
-# OGC CityGML 2.0ÖĞÎÄ°æ±¾
+# OGC CityGML 2.0ä¸­æ–‡ç‰ˆæœ¬
 
-´Ë²Ö¿â°üº¬ÁËOGC CityGML 2.0ÖĞÎÄ°æ±¾µÄËùÓĞÄÚÈİ
+## Introduction
 
-´Ë²Ö¿âµÄ×éÖ¯·½Ê½ÈçÏÂ:
+The CityGML2.0 Chinese version translated by OGC China.
 
-* index.adoc - ÎŞÄÚÈİ£¬µ«ÊÇÊÇÒ»¸ö±ØÒªµÄÎÄ¼ş
-* CityGML - °×Æ¤ÊéÎÄµµµÄÖ÷ÒªÄÚÈİÎÄ¼ş¼Ğ
-  - °´¶à¸ö²¿·ÖºÍÄ¿Â¼×éÖ¯
-  - ÕâÊÇ´´½¨°×Æ¤ÊéÎÄ¼şËùĞèµÄÎ¨Ò»ÎÄ¼ş¼Ğ
-  - °×Æ¤ÊéÃ»ÓĞ¹Ì¶¨µÄ½á¹¹£¬ËùÒÔÒª°´ÕÕ×îÊÊºÏÄãµÄÄ¿µÄ×éÖ¯ÄÚÈİ
+[PDF](./output/OGCä¸­å›½è”ç›Ÿ--OGCåŸå¸‚åœ°ç†æ ‡è®°è¯­è¨€ç¼–ç æ ‡å‡†ä¸­æ–‡ç‰ˆ.pdf) 
+and [HTML](./output/OGCä¸­å›½è”ç›Ÿ--OGCåŸå¸‚åœ°ç†æ ‡è®°è¯­è¨€ç¼–ç æ ‡å‡†ä¸­æ–‡ç‰ˆ.html)
 
-´Ë²Ö¿âµÄÇëÇóÒÔÏÂ»·¾³:
+## How to contribute
 
-* Ruby 2.6.7+  £¨apt°²×°£©
+æ­¤ä»“åº“åŒ…å«äº†OGC CityGML 2.0ä¸­æ–‡ç‰ˆæœ¬çš„æ‰€æœ‰å†…å®¹
 
-* asciiDoctor 2.0.15+ £¨apt°²×°£©
+æ­¤ä»“åº“çš„ç»„ç»‡æ–¹å¼å¦‚ä¸‹:
 
-* asciiDoctor-pdf 1.6.0+ £¨gem°²×°£©
+* index.adoc - æ— å†…å®¹ï¼Œä½†æ˜¯æ˜¯ä¸€ä¸ªå¿…è¦çš„æ–‡ä»¶
+* CityGML - ç™½çš®ä¹¦æ–‡æ¡£çš„ä¸»è¦å†…å®¹æ–‡ä»¶å¤¹
+  - æŒ‰å¤šä¸ªéƒ¨åˆ†å’Œç›®å½•ç»„ç»‡
+  - è¿™æ˜¯åˆ›å»ºç™½çš®ä¹¦æ–‡ä»¶æ‰€éœ€çš„å”¯ä¸€æ–‡ä»¶å¤¹
+  - ç™½çš®ä¹¦æ²¡æœ‰å›ºå®šçš„ç»“æ„ï¼Œæ‰€ä»¥è¦æŒ‰ç…§æœ€é€‚åˆä½ çš„ç›®çš„ç»„ç»‡å†…å®¹
 
-* coderay £¨gem°²×°£©
+æ­¤ä»“åº“çš„è¯·æ±‚ä»¥ä¸‹ç¯å¢ƒ:
+
+* Ruby 2.6.7+  ï¼ˆaptå®‰è£…ï¼‰
+
+* asciiDoctor 2.0.15+ ï¼ˆaptå®‰è£…ï¼‰
+
+* asciiDoctor-pdf 1.6.0+ ï¼ˆgemå®‰è£…ï¼‰
+
+* coderay ï¼ˆgemå®‰è£…ï¼‰
 
 * asciidoctor-pdf-cjk
 
-* asciidoctor-mathematical : ÓÃÓÚpdfÖĞ¹«Ê½µÄÉú³É£¬ÈôÖ»Éú³Éhtml£¬¿É²»°²×°£¬°²×°ÈçÏÂ£º
+* asciidoctor-mathematical : ç”¨äºpdfä¸­å…¬å¼çš„ç”Ÿæˆï¼Œè‹¥åªç”Ÿæˆhtmlï¼Œå¯ä¸å®‰è£…ï¼Œå®‰è£…å¦‚ä¸‹ï¼š
 - sudo apt install ruby-dev
 
 - sudo apt-get -qq -y install bison flex libffi-dev libxml2-dev libgdk-pixbuf2.0-dev libcairo2-dev libpango1.0-dev fonts-lyx cmake
 
 - sudo gem install asciidoctor-mathematical
 
-¿É²é¿´Ä£°åÑùÊ½£º [PDF](output/output.pdf) and [HTML](output/output.html)
